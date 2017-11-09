@@ -2146,7 +2146,7 @@ class WilokePublic
 
         if ( $hasIcon ){
             $tooltip = $text;
-            $text = '<i class="icon_pin_alt"></i>';
+            $text = '<i class="icon_info_alt"></i>';
         }else{
             $tooltip = '';
         }
@@ -2205,7 +2205,7 @@ class WilokePublic
         ?>
         <div class="<?php echo esc_attr($itemClass); ?>">
             <a href="<?php echo esc_url(self::$googleMap . $aPageSettings['map']['location'] . '/' . $aPageSettings['map']['latlong']); ?>" target="_blank" data-tooltip="<?php echo esc_attr($text); ?>">
-                <i class="arrow_left-right_alt"></i>
+                <i class="icon_pin_alt"></i>
             </a>
         </div>
         <?php

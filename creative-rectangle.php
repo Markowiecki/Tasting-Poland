@@ -30,9 +30,9 @@
 			<?php	$ofertaOpis = get_post_meta($post->ID, 'listing_settings', true);?>
 			<!-- dane -->
 			<div class="ofertaDane">
-				<span><strong>Adres:</strong><br> <?php echo $ofertaOpis['map']['location'];?></span>
-				<span><strong>WWW:</strong><br> <a href="<?php echo $ofertaOpis['website'];?>"><?php echo $ofertaOpis['website'];?></a></span>
-				<span><strong>Telefon:</strong><br> <a href="<?php echo $ofertaOpis['phone_number'];?>"><?php echo $ofertaOpis['phone_number'];?></a></span>
+				<!-- <span><strong><?php if(ICL_LANGUAGE_CODE=='sv'): ?>Adress:<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>Address:<?php endif; ?></strong><br> <?php echo $ofertaOpis['map']['location'];?></span> -->
+				<span><strong><a href="<?php echo $ofertaOpis['website'];?>"><?php echo $ofertaOpis['website'];?></a></strong></span>
+				<!-- <span><strong><?php if(ICL_LANGUAGE_CODE=='sv'): ?>Telefon:<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>Phone:<?php endif; ?></strong><br> <a href="<?php echo $ofertaOpis['phone_number'];?>"><?php echo $ofertaOpis['phone_number'];?></a></span> -->
 			</div>
 			<?php  // echo '<pre>',print_r(get_post_meta($post->ID,'listing_settings')),'</pre>';?>
 			<?php //WilokePublic::renderContent($post, array('toggle_render_post_excerpt'=>false, 'toggle_render_address'=>'enable')); ?>
@@ -45,7 +45,7 @@
 					//WilokePublic::renderFavorite($post, $atts);
 					?>
 					<div class="tb__cell">
-			            <a href="mailto:<?php echo $ofertaOpis['Email'];?>" class="napiszWiadomosc" data-tooltip="Napisz wiadomość">
+			            <a href="mailto:<?php echo $ofertaOpis['Email'];?>" class="napiszWiadomosc" data-tooltip="<?php if(ICL_LANGUAGE_CODE=='sv'): ?>Skicka meddelande<?php elseif(ICL_LANGUAGE_CODE=='en'): ?>Send message<?php endif; ?>">
 			                <i class="icon_mail_alt"></i>
 			            </a>
 			        </div>
